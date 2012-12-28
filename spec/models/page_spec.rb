@@ -8,4 +8,9 @@ describe Page do
     page.wont have_valid(:slug).when(nil)
     page.wont have_valid(:slug).when('')
   end
+
+  it "outputs to html" do
+    page = Page.new body: "foo [[link]]"
+    page.to_html.must_equal "foo <a href='/link'>link</a>"
+  end
 end

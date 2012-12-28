@@ -1,8 +1,16 @@
+GIT
+  remote: git://github.com/knewter/wikitop.git
+  revision: 45dc0770c44e5d89440b33a3bce18b442fd0d0e6
+  specs:
+    wikitop (0.0.1)
+      treetop
+
 PATH
   remote: .
   specs:
     wacky (0.0.1)
       rails (~> 3.2.9)
+      wikitop
 
 GEM
   remote: http://rubygems.org/
@@ -150,3 +158,4 @@ DEPENDENCIES
   turn
   valid_attribute
   wacky!
+  wikitop!
