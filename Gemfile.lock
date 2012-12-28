@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/knewter/wikitop.git
+  revision: b6c5f2dc72e0448c204563775f9c8649d16b0a52
+  specs:
+    wikitop (0.0.2)
+      treetop
+
 PATH
   remote: .
   specs:
@@ -6,12 +13,6 @@ PATH
       redcarpet
       slim
       wikitop
-
-PATH
-  remote: /home/jadams/ruby/wikitop
-  specs:
-    wikitop (0.0.1)
-      treetop
 
 GEM
   remote: http://rubygems.org/

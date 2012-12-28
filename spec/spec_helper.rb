@@ -15,6 +15,7 @@ require 'pry'
 require 'turn/autorun'
 require 'minitest/spec'
 require 'minitest/matchers'
+require 'minitest-capybara'
 require 'valid_attribute'
 require 'turn'
 
@@ -22,7 +23,6 @@ require 'action_controller/test_case'
 require 'rails/test_help'
 
 require 'capybara/rails'
-require 'capybara/rspec/matchers'
 require 'database_cleaner'
 
 include Wacky
