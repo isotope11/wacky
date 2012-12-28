@@ -7,11 +7,11 @@ require "wacky/version"
 Gem::Specification.new do |s|
   s.name        = "wacky"
   s.version     = Wacky::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Wacky."
-  s.description = "TODO: Description of Wacky."
+  s.authors     = ["Josh Adams"]
+  s.email       = ["josh@isotope11.com"]
+  s.homepage    = "http://www.isotope11.com"
+  s.summary     = "A wiki engine for rails"
+  s.description = "A wiki engine for rails"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
@@ -20,4 +20,8 @@ Gem::Specification.new do |s|
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "combustion", '~> 0.3.1'
+  s.add_development_dependency 'minitest'
+  s.add_development_dependency 'turn'
+  s.add_development_dependency 'pry'
 end
