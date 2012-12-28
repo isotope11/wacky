@@ -6,6 +6,10 @@ module Wacky
       parser.parse(body).to_html
     end
 
+    def to_param
+      slug
+    end
+
     private
     def parser
       Wikitop::Parser.new
