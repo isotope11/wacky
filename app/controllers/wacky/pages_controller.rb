@@ -17,6 +17,17 @@ module Wacky
       end
     end
 
+    def edit
+      load_page
+    end
+
+    def update
+      load_page
+      @page.body = params[:page]['body']
+      @page.save
+      redirect_to @page
+    end
+
     protected
     def load_page
       @page = Page.find_by_slug(params[:id])

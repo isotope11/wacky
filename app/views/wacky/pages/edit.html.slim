@@ -1,8 +1,6 @@
-h2 Make a new page
+h2 Edit #{@page.slug}
 
 = form_for @page do |f|
-  = f.label :slug
-  = f.text_field :slug
   = f.label :body
   = f.text_area :body
   = f.submit

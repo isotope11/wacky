@@ -22,4 +22,16 @@ class PagesIntegrationSpec < AcceptanceSpec
       Page.count.must_equal old_page_count + 1
     end
   end
+
+  describe "editing a page" do
+    it "updates the page when you edit it" do
+      Page.create(slug: 'foo', body: 'bar')
+      visit '/foo'
+      click_link 'Edit'
+      fill_in 'Body', with: 'baz'
+      click_button 'Update'
+      visit '/foo'
+      page.must have_text 'baz'
+    end
+  end
 end

@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'turn'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'capybara'
+  s.add_development_dependency 'launchy'
   s.add_development_dependency 'minitest-capybara'
   s.add_development_dependency 'minitest-spec-rails'
   s.add_development_dependency 'database_cleaner'
