@@ -5,11 +5,14 @@ module Wacky
     end
 
     def new
-      @page = Page.new slug: params[:id]
+      @page = Page.new
+      @page.slug = params[:id]
     end
 
     def create
-      @page = Page.new(params[:page])
+      @page = Page.new
+      @page.slug = params[:page]['slug']
+      @page.body = params[:page]['body']
       if @page.save
         redirect_to @page, notice: "Page created successfully."
       else
