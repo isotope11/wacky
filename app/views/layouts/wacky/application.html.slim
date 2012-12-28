@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    title Wacky
+    = stylesheet_link_tag    "wacky/application", :media => "all"
+    = javascript_include_tag "wacky/application"
+    = csrf_meta_tags
+  body
+    = yield

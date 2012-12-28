@@ -3,9 +3,10 @@ require 'spec_helper'
 class PagesIntegrationSpec < AcceptanceSpec
   describe "viewing the index page" do
     it "can be viewed" do
-      Page.create(slug: 'index', body: 'Hoo boy')
+      Page.create(slug: 'index', body: 'Hoo boy [[link]]')
       visit "/"
-      page.must have_text "Hoo boy"
+      page.must have_text "Hoo boy link"
+      find_link('link').visible?.must_equal true # Don't know how to do this sensibly :-\
     end
   end
 
