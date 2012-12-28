@@ -8,20 +8,19 @@ module Wacky
       @page = Page.new slug: params[:id]
     end
 
-    def edit
-      load_page
-    end
-
-    def update
-      if @page.update_attributes(params[:page])
-        redirect_to @page, notice: "Page updated successfully."
+    def create
+      @page = Page.new(params[:page])
+      if @page.save
+        redirect_to @page, notice: "Page created successfully."
+      else
+        render 'new', error: 'There was a problem creating the page.'
       end
     end
 
     protected
     def load_page
       @page = Page.find_by_slug(params[:id])
-      redirect_to new_page_path(params[:id]) unless @page
+      redirect_to new_page_path(id: params[:id]) unless @page
     end
   end
 end

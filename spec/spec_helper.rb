@@ -23,10 +23,23 @@ require 'rails/test_help'
 
 require 'capybara/rails'
 require 'capybara/rspec/matchers'
+require 'database_cleaner'
 
 include Wacky
 
 class AcceptanceSpec < MiniTest::Spec
   include Capybara::RSpecMatchers
   include Capybara::DSL
+end
+
+DatabaseCleaner.strategy = :transaction
+
+class MiniTest::Spec
+  before :each do
+    DatabaseCleaner.start
+  end
+
+  after :each do
+    DatabaseCleaner.clean
+  end
 end

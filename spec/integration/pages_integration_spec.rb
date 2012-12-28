@@ -14,5 +14,12 @@ class PagesIntegrationSpec < AcceptanceSpec
       visit "/new-page"
       page.must have_text "Make a new page"
     end
+
+    it "creates a new page when you post" do
+      old_page_count = Page.count
+      visit "/new-page"
+      click_button 'Create'
+      Page.count.must_equal old_page_count + 1
+    end
   end
 end
