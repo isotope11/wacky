@@ -3,7 +3,7 @@ require 'spec_helper'
 class PagesIntegrationSpec < AcceptanceSpec
   describe "viewing the index page" do
     it "can be viewed" do
-      Page.create(slug: 'index', body: 'Hoo **boy** [[link]]')
+      Page.create(slug: 'index', body: 'Hoo **boy** [link](/link)')
       visit "/"
       page.must have_text "Hoo boy link"
       page.must have_xpath "/html/body/p/strong"

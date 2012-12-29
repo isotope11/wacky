@@ -3,8 +3,7 @@ module Wacky
     validates_presence_of :slug
 
     def to_html
-      wiki_parsed = wiki_parser.parse(body).to_html
-      markdown_parser.render(wiki_parsed)
+      markdown_parser.render(body)
     end
 
     def to_param
