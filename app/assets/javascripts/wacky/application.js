@@ -15,4 +15,5 @@
 //= require ace
 //= require theme-solarized_dark.js
 //= require mode-markdown.js
+//= require keybinding-vim
 //= require_tree .

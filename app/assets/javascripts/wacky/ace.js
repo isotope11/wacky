@@ -7,4 +7,7 @@ $(function(){
   });
   editor.setTheme("ace/theme/solarized_dark");
   editor.getSession().setMode("ace/mode/markdown");
+  require(['ace/keyboard/vim'], function(vimMode){
+    editor.setKeyboardHandler(vimMode.handler);
+  });
 });
