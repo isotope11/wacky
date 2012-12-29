@@ -11,6 +11,6 @@ describe Page do
 
   it "outputs to html" do
     page = Page.new body: "foo [[link]]"
-    page.to_html.must_equal "foo <a href='/link'>link</a>"
+    page.to_html.must_equal "<p>foo <a href='/link'>link</a></p>\n"
   end
 end
