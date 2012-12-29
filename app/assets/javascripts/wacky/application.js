@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ace
+//= require theme-solarized_dark.js
+//= require mode-markdown.js
 //= require_tree .

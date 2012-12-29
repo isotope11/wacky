@@ -1,6 +1,8 @@
 h2 Edit #{@page.slug}
 
 = form_for @page do |f|
+  = f.submit
+  br
   = f.label :body
   = f.text_area :body
-  = f.submit
+  #page_editor
