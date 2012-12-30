@@ -1,12 +1,15 @@
 h2 Versions of #{@page.slug}
 
-table.versions
+table.subdued.versions
   thead
     tr
       th #
       th Created At
   tbody
     - @page.versions.each do |version|
-      tr
+      tr class=cycle('odd', 'even')
         td= link_to(version.index, version_page_path(@page, version: version.index))
         td= version.created_at.to_s(:db)
+
+ul.actions
+  li= link_to "Back to original", page_path(@page)
