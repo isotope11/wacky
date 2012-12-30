@@ -25,15 +25,38 @@ class PagesIntegrationSpec < AcceptanceSpec
     end
   end
 
-  describe "editing a page" do
-    it "updates the page when you edit it" do
-      Page.create(slug: 'foo', body: 'bar')
-      visit '/foo'
-      click_link 'Edit'
-      fill_in 'Body', with: 'baz'
-      click_button 'Update'
-      visit '/foo'
-      page.must have_text 'baz'
+  describe "working with an existing page" do
+    before do
+      @page = Page.create(slug: 'foo', body: 'bar')
+    end
+
+    describe "editing" do
+      it "updates the page when you edit it" do
+        visit '/foo'
+        click_link 'Edit'
+        fill_in 'Body', with: 'baz'
+        click_button 'Update'
+        visit '/foo'
+        page.must have_text 'baz'
+      end
+    end
+
+    describe "versions" do
+      it "lists versions of a page and reverts successfully" do
+        @page.update_attributes(body: 'new_content')
+        visit '/foo'
+        click_link 'Versions'
+        page.must have_text "Versions of #{@page.slug}"
+        within('table.versions') do
+          page.must have_text '1'
+          page.must have_text '2'
+          click_link '1'
+        end
+        page.must have_text 'bar'
+        click_button "Revert to this version"
+        visit '/foo'
+        page.must_have_text 'bar'
+      end
     end
   end
 end

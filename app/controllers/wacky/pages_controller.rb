@@ -31,6 +31,22 @@ module Wacky
       redirect_to @page
     end
 
+    def versions
+      load_page
+    end
+
+    def version
+      load_page
+      @page = @page.versions[params[:version].to_i].reify
+    end
+
+    def revert_to_version
+      load_page
+      @page = @page.versions[params[:version].to_i].reify
+      @page.save
+      redirect_to @page
+    end
+
     protected
     def load_page
       @page = Page.find_by_slug(params[:id])

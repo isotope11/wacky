@@ -1,0 +1,8 @@
+h2 Showing version #{params[:version]} of #{@page.slug}
+
+= @page.to_html.html_safe
+
+= form_tag revert_to_version_page_path(@page) do
+  = hidden_field_tag :version, params[:version]
+  = submit_tag "Revert to this version"
+= link_to "Back to original", page_path(@page)
