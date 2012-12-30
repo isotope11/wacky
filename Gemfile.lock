@@ -11,6 +11,7 @@ PATH
     wacky (0.0.1)
       ace-rails-ap
       jquery-rails
+      paper_trail
       rails (~> 3.2.9)
       redcarpet
       slim
@@ -96,6 +97,9 @@ GEM
       rails (~> 3.0)
     multi_json (1.5.0)
     nokogiri (1.5.6)
+    paper_trail (2.7.0)
+      activerecord (~> 3.0)
+      railties (~> 3.0)
     pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.10)

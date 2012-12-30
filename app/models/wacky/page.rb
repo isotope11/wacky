@@ -1,6 +1,7 @@
 module Wacky
   class Page < ActiveRecord::Base
     validates_presence_of :slug
+    has_paper_trail
 
     def to_html
       markdown_parser.render(body)
