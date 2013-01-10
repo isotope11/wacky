@@ -7,11 +7,15 @@ have a drop-in wiki for any given Rails app.
 
 Add wacky to your Gemfile:
 
-    gem 'wacky'
+```ruby
+gem 'wacky'
+```
 
 Mount wacky on your app:
 
-    mount Wacky, at: '/wiki'
+```ruby
+mount Wacky, at: '/wiki'
+```
 
 Copy the migrations and run them:
 
