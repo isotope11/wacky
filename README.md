@@ -21,3 +21,9 @@ Copy the migrations and run them:
 
     rake wacky:install:migrations
     rake db:migrate
+
+### Development
+
+To run the tests:
+
+    rake
