@@ -1,4 +1,5 @@
 ## Wacky
+[![Build Status](https://travis-ci.org/isotope11/wacky.png?branch=master)](https://travis-ci.org/isotope11/wacky)
 
 Wacky is an engine for Rails that aims to be the best wiki.  The end goal is to
 have a drop-in wiki for any given Rails app.
