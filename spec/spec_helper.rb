@@ -25,6 +25,8 @@ require 'rails/test_help'
 require 'capybara/rails'
 require 'database_cleaner'
 
+Turn.config.format = :outline
+
 include Wacky
 
 class AcceptanceSpec < MiniTest::Spec
