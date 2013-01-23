@@ -9,5 +9,6 @@ Wacky::Engine.routes.draw do
     end
   end
 
+  match "/recently_updated" => "special_pages#recently_updated"
   match "/:id" => "pages#show"
 end
