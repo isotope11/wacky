@@ -1,5 +1,7 @@
-class Wacky::SpecialPagesController < ApplicationController
-  def recently_updated
-    @pages = Page.order("updated_at DESC").limit(10)
+module Wacky
+  class SpecialPagesController < Wacky::ApplicationController
+    def recently_updated
+      @pages = Page.order("updated_at DESC").limit(10)
+    end
   end
 end
