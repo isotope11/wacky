@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency "jquery-rails"
   s.add_dependency "ace-rails-ap"
   s.add_dependency "paper_trail"
+  s.add_dependency "showdown-rails"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "combustion", '~> 0.3.1'

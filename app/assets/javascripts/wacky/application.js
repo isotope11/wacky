@@ -16,4 +16,5 @@
 //= require theme-solarized_dark.js
 //= require mode-markdown.js
 //= require keybinding-vim
+//= require showdown
 //= require_tree .

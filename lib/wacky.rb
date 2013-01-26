@@ -7,6 +7,7 @@ require "slim"
 require 'redcarpet'
 require 'ace-rails-ap'
 require 'paper_trail'
+require 'showdown-rails'
 
 module Wacky
 end
