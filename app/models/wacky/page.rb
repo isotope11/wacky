@@ -1,6 +1,7 @@
 module Wacky
   class Page < ActiveRecord::Base
     validates_presence_of :slug
+    validates :slug, format: { with: /^[a-zA-Z0-9_-]*$/ }, uniqueness: true
     has_paper_trail
 
     def to_html
@@ -18,7 +19,7 @@ module Wacky
 
     def markdown_parser
       Redcarpet::Markdown.new(Redcarpet::Render::HTML,
-                              :autolink => true, :space_after_headers => true)
+                              autolink: true, space_after_headers: true)
     end
   end
 end

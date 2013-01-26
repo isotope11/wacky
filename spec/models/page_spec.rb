@@ -5,8 +5,10 @@ describe Page do
     page = Page.new
 
     page.must have_valid(:slug).when('foo')
+    page.must have_valid(:slug).when('a-b')
     page.wont have_valid(:slug).when(nil)
     page.wont have_valid(:slug).when('')
+    page.wont have_valid(:slug).when('a b')
   end
 
   it "outputs to html" do
