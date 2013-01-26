@@ -7,3 +7,4 @@ test/dummy/tmp/
 test/dummy/.sass-cache
 tmp
 *.sw*
+spec/internal/wacky_test # sqlite db
