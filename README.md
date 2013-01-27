@@ -8,6 +8,12 @@ Features:
 
 - versioning
 - realtime markdown preview
+- title extraction
+- keyboard shortcuts
+  - `e` to edit the current page
+  - `v` to see the versions
+  - `?` to see the help
+  - `ESC` to hide the help
 
 ### Installation
 

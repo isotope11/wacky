@@ -1,5 +1,7 @@
+= render 'help'
+
 = @page.to_html.html_safe
 
 ul.actions
   li= link_to "Edit", edit_page_path(@page), rel: 'edit-page'
-  li= link_to "Versions", versions_page_path(@page)
+  li= link_to "Versions", versions_page_path(@page), rel: 'page-versions'

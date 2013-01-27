@@ -1,0 +1,12 @@
+.wacky-keyboard-commands {
+  dl {
+    dt {
+      font-weight: bold;
+      width: 50px;
+      text-align: right;
+    }
+    dt, dd {
+      display: inline-block;
+    }
+  }
+}
