@@ -17,13 +17,13 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.11"
-  s.add_dependency "wikitop"
   s.add_dependency "slim"
   s.add_dependency "redcarpet"
   s.add_dependency "jquery-rails"
   s.add_dependency "ace-rails-ap"
   s.add_dependency "paper_trail"
   s.add_dependency "showdown-rails"
+  s.add_dependency "nokogiri"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "combustion", '~> 0.3.1'
@@ -37,4 +37,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'minitest-capybara'
   s.add_development_dependency 'minitest-spec-rails'
   s.add_development_dependency 'database_cleaner'
+  s.add_development_dependency 'mocha'
 end

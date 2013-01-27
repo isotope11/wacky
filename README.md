@@ -28,6 +28,8 @@ Copy the migrations and run them:
     rake wacky:install:migrations
     rake db:migrate
 
+NOTE: Wacky will set an instance variable, `@wacky_title`, that has the title of the page you're on.  It extracts this by finding the first heading element (h1, h2, h3, h4, h5, h6) on the page.  If you want to include that in your layout title, you're welcome to.
+
 ### Development
 
 To run the tests:

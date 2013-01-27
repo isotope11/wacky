@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'integration_helper'
 
 class PagesIntegrationSpec < AcceptanceSpec
   describe "viewing the index page" do
@@ -27,7 +28,7 @@ class PagesIntegrationSpec < AcceptanceSpec
 
   describe "working with an existing page" do
     before do
-      @page = Page.create(slug: 'foo', body: 'bar')
+      @page = Page.create(slug: 'foo', body: '<h2>Bar Page</h2>bar')
     end
 
     describe "editing" do
@@ -38,6 +39,13 @@ class PagesIntegrationSpec < AcceptanceSpec
         click_button 'Update'
         visit '/foo'
         page.must have_text 'baz'
+      end
+    end
+
+    describe "the title" do
+      it "sets the title to the extracted title (first heading)" do
+        visit '/foo'
+        page_title.must_equal("Bar Page")
       end
     end
 

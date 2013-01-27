@@ -51,6 +51,13 @@ module Wacky
     def load_page
       @page = Page.find_by_slug(params[:id])
       redirect_to new_page_path(id: params[:id]) unless @page
+      @wacky_title = extracted_title
+    end
+
+    def extracted_title
+      if(@page)
+        ExtractsTitle.new(@page.body).title
+      end
     end
   end
 end

@@ -1,22 +1,15 @@
-GIT
-  remote: git://github.com/knewter/wikitop.git
-  revision: b6c5f2dc72e0448c204563775f9c8649d16b0a52
-  specs:
-    wikitop (0.0.2)
-      treetop
-
 PATH
   remote: .
   specs:
     wacky (0.1.2)
       ace-rails-ap
       jquery-rails
+      nokogiri
       paper_trail
       rails (~> 3.2.11)
       redcarpet
       showdown-rails
       slim
-      wikitop
 
 GEM
   remote: http://rubygems.org/
@@ -85,6 +78,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     method_source (0.8.1)
     mime-types (1.19)
     minitest (4.3.3)
@@ -96,6 +90,8 @@ GEM
     minitest-spec-rails (3.0.6)
       minitest
       rails (~> 3.0)
+    mocha (0.13.2)
+      metaclass (~> 0.0.1)
     multi_json (1.5.0)
     nokogiri (1.5.6)
     paper_trail (2.7.0)
@@ -178,10 +174,10 @@ DEPENDENCIES
   minitest-capybara
   minitest-matchers
   minitest-spec-rails
+  mocha
   pg
   pry
   sqlite3
   turn
   valid_attribute
   wacky!
-  wikitop!
