@@ -28,7 +28,7 @@ class PagesIntegrationSpec < AcceptanceSpec
 
   describe "working with an existing page" do
     before do
-      @page = Page.create(slug: 'foo', body: '<h2>Bar Page</h2>bar')
+      @page = Page.create(slug: 'foo', body: "## Bar Page\nbar")
     end
 
     describe "editing" do

@@ -56,7 +56,7 @@ module Wacky
 
     def extracted_title
       if(@page)
-        ExtractsTitle.new(@page.body).title
+        ExtractsTitle.new(@page.to_html).title
       end
     end
   end
