@@ -6,4 +6,5 @@ class Wacky::SpecialPagesController < ApplicationController
   def all_pages
     @pages = Page.order("slug").limit(20)
   end
+
 end
