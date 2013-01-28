@@ -9,4 +9,12 @@ class SpecialPagesIntegrationSpec < AcceptanceSpec
       page.must have_text "Updated Page"
     end
   end
+
+  describe "viewing all_pages" do
+    it "can be viewed" do
+      Page.create(slug: 'all-pages', body: 'Hoo **boy** [link](/link)')
+      visit "/all_pages"
+      page.must have_text "All Pages"
+    end
+  end
 end
