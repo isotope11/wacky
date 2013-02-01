@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency "paper_trail"
   s.add_dependency "showdown-rails"
   s.add_dependency "nokogiri"
+  s.add_dependency "kaminari"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "combustion", '~> 0.3.1'

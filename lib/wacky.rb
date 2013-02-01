@@ -7,6 +7,7 @@ require 'redcarpet'
 require 'ace-rails-ap'
 require 'paper_trail'
 require 'showdown-rails'
+require 'kaminari'
 
 module Wacky
 end
