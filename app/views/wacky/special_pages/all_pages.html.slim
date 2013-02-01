@@ -1,4 +1,6 @@
 h2 All Pages
-ul
- <%= paginate @pages %>
 
+= paginate @pages
+ul
+  - @pages.each do |page|
+    li= link_to page.slug.titleize, page_path(page)

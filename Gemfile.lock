@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    wacky (0.1.3)
+    wacky (0.1.5)
       ace-rails-ap
       jquery-rails
       nokogiri
