@@ -26,7 +26,7 @@ gem 'wacky'
 Mount wacky on your app:
 
 ```ruby
-mount Wacky, at: '/wiki'
+mount Wacky::Engine, at: "/wiki"
 ```
 
 Copy the migrations and run them:
